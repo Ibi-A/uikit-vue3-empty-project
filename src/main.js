@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
+import UIkit from 'uikit'
+import '@/assets/styles/styles.scss'
+import Icons from 'uikit/dist/js/uikit-icons'
 
-createApp(App).mount('#app')
+UIkit.use(Icons)
+window.UIkit = UIkit
+
+createApp(App).use(router).mount('#app')
